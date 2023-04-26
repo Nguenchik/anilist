@@ -1,4 +1,4 @@
-import {debounceSearchQuery} from '../../utils/debounce';
+import {debounceSearchQuery} from '../utils/debounce';
 
 describe('debounce', () => {
   jest.useFakeTimers();
