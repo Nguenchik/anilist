@@ -1,0 +1,35 @@
+@import './base';
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.anime-info{
+	border-radius: 5px;
+	border-left: 3px solid	#F27474;
+	padding-left: 20px;
+	&__title {
+		font-size: 32px;
+	}
+	&__description {
+		margin: 10px 0;
+	}
+	&__star {
+		width: 20px;
+		height: 20px;
+		margin-right: 7px;
+	}
+	&__rating {
+		display: flex;
+		align-items: center;
+	}
+}
