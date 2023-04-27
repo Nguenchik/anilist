@@ -7,17 +7,18 @@
 	--dur: 1s;
 	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1280 - 320));
 }
-.anime__search {
-	color: var(--fg);
-	font: 1em/1.5 Hind, sans-serif;
-}
-form, input, .caret {
-	margin: auto;
-}
-form {
+.search{
 	position: relative;
 	width: 100%;
 	max-width: 17em;
+	margin: 50px auto;
+	&__input  {
+		color: var(--fg);
+		font: 1em/1.5 Hind, sans-serif;
+	}
+}
+form, input, .caret {
+	margin: auto;
 }
 input, .caret {
 	display: block;

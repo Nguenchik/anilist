@@ -1,9 +1,22 @@
 <script lang="ts" setup>
 import { useAnimeStore } from '@/stores/modules/anime'
 import { storeToRefs } from 'pinia'
+import { computed, unref } from 'vue'
 
 const store = useAnimeStore()
 const {animeItem, isLoading} = storeToRefs(store)
+
+const airedInfo = computed(() => {
+    const airStartDate = `${unref(animeItem)?.startDate.year}-${unref(animeItem)?.startDate.month}`;
+    const airEndDate = `${unref(animeItem)?.endDate.year}-${unref(animeItem)?.endDate.month}`;
+    if (unref(animeItem)?.status === 'RELEASING') {
+    return `Air date: ${airStartDate}`
+  } else if (unref(animeItem)?.status === 'FINISHED') {
+    return `Start Date: ${airStartDate}. End Date: ${airEndDate}`;
+  } else {
+    return 'Unknown';
+  }
+})
 
 </script>
 
@@ -11,20 +24,17 @@ const {animeItem, isLoading} = storeToRefs(store)
     <div v-if="animeItem && !isLoading" class="anime-info">
         <div class="anime-info__header">
             <div class="anime-info__rating" v-if="animeItem.averageScore">
-            <img class="anime-info__star" src="@/assets/img/star.svg"/>
-            <span>{{ animeItem.averageScore }} / 100</span>
-        </div>
+                <img class="anime-info__star" src="@/assets/img/star.svg"/>
+                <span>{{ animeItem.averageScore }} / 100</span>
+            </div>
+            <div class="anime-info__date">{{ airedInfo }}</div>
         </div>
         <div class="anime-info__title">{{ animeItem.title.romaji }}</div>
-        <div class="anime-info__description">{{ animeItem.description }}</div>
-        <img :src="animeItem.coverImage.large" :alt="animeItem.title.romaji" />
-        <p class="anime-info__status">
-        Status: {{ animeItem.status }}
-        <br />
-        Start Date: {{ animeItem.startDate?.year }}-{{ animeItem.startDate?.month }}
-        <br />
-        End Date: {{ animeItem.endDate?.year }}-{{ animeItem.endDate?.month }}
-        </p>
+        <div class="anime-info__container">
+            <img class="anime-info__img" :src="animeItem.coverImage.large" :alt="animeItem.title.romaji" />
+            <div class="anime-info__description">{{ animeItem.description }}</div>
+
+        </div>
     </div>
 
     <div v-else-if="isLoading">
@@ -32,6 +42,6 @@ const {animeItem, isLoading} = storeToRefs(store)
     </div>
 
     <div v-else>
-      <h1>Anime</h1>
+      <h1>Type anime</h1>
     </div>
 </template>

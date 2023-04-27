@@ -6,14 +6,16 @@
 	margin: 0;
 	padding: 0;
 }
-
-#app {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 2rem;
+.anime {
+	padding: 0 20px;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .anime-info{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 720px;
 	border-radius: 5px;
 	border-left: 3px solid	#F27474;
 	padding-left: 20px;
@@ -22,14 +24,35 @@
 	}
 	&__description {
 		margin: 10px 0;
+		max-height: 300px;
+		overflow-y: scroll;
+		padding-right: 20px;
+		margin-bottom: 15px;
 	}
 	&__star {
 		width: 20px;
 		height: 20px;
 		margin-right: 7px;
 	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
 	&__rating {
 		display: flex;
 		align-items: center;
+	}
+	&__date {
+		font-size: 16px;
+	}
+	&__img {
+		max-width: 100%;
+		max-height: 345px;
+		height: 100%;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap:20px;
 	}
 }

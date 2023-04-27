@@ -37,11 +37,11 @@ const handleSearchInputChange = () => {
 </script>
 
 <template>
-    <form class="anime__form">
+    <form class="search">
       <label for="search">Search</label>
       <input
         id="search"
-        class="anime__search"
+        class="search__input"
         @input="handleSearchInputChange" 
         type="search"  
         v-model="searchTerm" 
