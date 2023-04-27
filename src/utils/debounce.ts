@@ -1,22 +1,22 @@
 export const debounceSearchQuery = (callback: () => void, delay: number) => {
-  let timerId: NodeJS.Timeout | null = null;
-  
+  let timerId: NodeJS.Timeout | null = null
+
   const cancel = () => {
     if (timerId) {
-      clearTimeout(timerId);
-      timerId = null;
+      clearTimeout(timerId)
+      timerId = null
     }
-  };
+  }
 
   const execute = () => {
-    cancel();
+    cancel()
     timerId = setTimeout(() => {
-      callback();
-    }, delay);
-  };
+      callback()
+    }, delay)
+  }
 
   return {
     cancel,
-    execute,
-  };
+    execute
+  }
 }
