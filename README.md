@@ -100,7 +100,7 @@ This is the structure of the files in the project:
     │   ├── grapgql             # graphql queries and mutations
     │   ├── plugins             # custom plugins (apollo, ...)
     │   ├── router              # routes settings
-    │   ├── stores               # Pinia store
+    │   ├── stores              # Pinia store
     │   │   ├── modules         # store's modules
     │   │   └── index.ts        # pinia config file
     │   ├── types               # data interfaces
