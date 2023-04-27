@@ -85,3 +85,44 @@ yarn format
 Checks if your files are formatted. This command will output a human-friendly message and a list of unformatted files, if any.
 
 <br />
+
+# 🧬 Project structure
+
+This is the structure of the files in the project:
+
+```sh
+    │
+    ├── cypress                 # e2e test files
+    ├── src                     # source files
+    │   ├── __tests__           # unit tests
+    │   ├── assets              # images, constants and other static resources
+    │   ├── components
+    │   ├── grapgql             # graphql queries and mutations
+    │   ├── plugins             # custom plugins (apollo, ...)
+    │   ├── router              # routes settings
+    │   ├── stores               # Pinia store
+    │   │   ├── modules         # store's modules
+    │   │   └── index.ts        # pinia config file
+    │   ├── types               # data interfaces
+    │   ├── utils               # utilities functions and custom components
+    │   ├── views               
+    │   ├── App.vue
+    │   ├── main.ts
+    ├── .eslintrc.cjs
+    ├── .gitignore
+    ├── .prettierrc
+    ├── cypress.config.ts
+    ├── env.d.ts
+    ├── index.html
+    ├── jest.config.json
+    ├── package.json
+    ├── package.lock.json
+    ├── README.md
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    ├── tsconfig.vitest.json
+    ├── vite.config.ts
+    ├── vitest.config.ts
+    └── yarn.lock
+```
