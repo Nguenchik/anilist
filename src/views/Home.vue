@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import AnimeInfo from '@/components/AnimeInfo.vue'
 import Search from '@/components/Search.vue'
-
 </script>
 
 <template>
   <div class="anime">
-    <Search/>
+    <Search />
     <AnimeInfo />
   </div>
 </template>

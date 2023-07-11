@@ -1,68 +1,128 @@
-# anilist
+<h1>Anime code challenge</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<br />
 
-## Recommended IDE Setup
+# 🚀 Run project script
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+yarn
 ```
 
-### Compile and Hot-Reload for Development
+# 🚀 Available Scripts
 
-```sh
-npm run dev
+In the project directory, you can run:
+
+<br />
+
+## ⚡️ development mode
+
+```
+yarn dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-```sh
-npm run build
+<br />
+
+## 🧪 test
+
+```
+yarn test
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Launches unit test runner.
 
-```sh
-npm run test:unit
+```
+yarn test
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+Launches unit test runner.
 
-```sh
-npm run test:e2e:dev
+```
+yarn test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+Launches e2e test runner.
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+<br />
 
-```sh
-npm run build
-npm run test:e2e
+## 🦾 build prod 
+```
+yarn build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Builds the app for production to the `dist` folder.\
+It correctly bundles Vue in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+<br />
+
+```
+yarn preview
+```
+
+To preview build version
+
+## 🧶 lint
+
+```
+yarn lint
+```
+
+Running this command can dramatically improve ESLint's running time by ensuring that only changed files are linted.
+
+<br />
+
+## 🎯 format
+
+```
+yarn format
+```
+
+Checks if your files are formatted. This command will output a human-friendly message and a list of unformatted files, if any.
+
+<br />
+
+# 🧬 Project structure
+
+This is the structure of the files in the project:
 
 ```sh
-npm run lint
+    │
+    ├── cypress                 # e2e test files
+    ├── src                     # source files
+    │   ├── __tests__           # unit tests
+    │   ├── assets              # images, constants and other static resources
+    │   ├── components
+    │   ├── grapgql             # graphql queries and mutations
+    │   ├── plugins             # custom plugins (apollo, ...)
+    │   ├── router              # routes settings
+    │   ├── stores              # Pinia store
+    │   │   ├── modules         # store's modules
+    │   │   └── index.ts        # pinia config file
+    │   ├── types               # data interfaces
+    │   ├── utils               # utilities functions and custom components
+    │   ├── views               
+    │   ├── App.vue
+    │   ├── main.ts
+    ├── .eslintrc.cjs
+    ├── .gitignore
+    ├── .prettierrc
+    ├── cypress.config.ts
+    ├── env.d.ts
+    ├── index.html
+    ├── jest.config.json
+    ├── package.json
+    ├── package.lock.json
+    ├── README.md
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    ├── tsconfig.vitest.json
+    ├── vite.config.ts
+    ├── vitest.config.ts
+    └── yarn.lock
 ```
